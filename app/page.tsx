@@ -1,7 +1,13 @@
-import Image from 'next/image'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <p>Hello</p>
-  )
+    <div className="flex items-center justify-center mt-40">
+      <Link href="/explore/items">
+        <Button variant="red">Explore</Button>
+      </Link>
+    </div>
+  );
 }
