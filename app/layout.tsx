@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import TanstackProvider from "@/providers/TanstackProvider";
 import { TailwindIndicator } from "@/components/TailwindIndicator"
+import Navbar from "@/components/Navbar"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -39,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
           >
             <div className="relative flex min-h-screen flex-col">
-              {/* <Navbar /> */}
+              <Navbar />
               <main className="flex-1">
                 <TanstackProvider>{children}</TanstackProvider>
               </main>
