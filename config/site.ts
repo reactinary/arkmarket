@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "ArkMarket from ArkProject",
-  url: "https://www.arkproject.dev/",
-  ogImage: "https://pbs.twimg.com/media/F2DsSdwWEAAQiPz?format=png&name=large",
+  name: "ArkMarket by ArkProject",
+  url: "https://arkmarket-nft.vercel.app/explore/items/",
+  ogImage: "https://res.cloudinary.com/dzsyv502k/image/upload/v1699616898/preview-arkmarket_muatam.png",
   description:
-    "The Ark Project is a decentralized and open-source infrastructure that aims to revolutionize the trading of digital assets. By empowering creators and providing them with powerful tools, by empowering creators, we aspire to onboard the next millions of digital asset owners.",
+    "ArkMarket by ArkProject, a decentralized and open-source infrastructure that aims to revolutionize the trading of digital assets. ArkProject is powered by the Starknet ecosystem, and leverage Zero Knowledge Proofs to provide a scalable, secure and decentralized trading experience.",
   links: {
     twitter: "https://twitter.com/ArkProjectNFTs",
     github: "https://github.com/ArkProjectNFTs",
