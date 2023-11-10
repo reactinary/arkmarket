@@ -17,13 +17,6 @@ type NFTCardProps = {
 export default function NFTCard({ id, imageUrl, name }: NFTCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const generateRandomPrice = () => {
-    return (0.05 + Math.random() * 0.05).toFixed(3);
-  }
-
-  const randomPrice = generateRandomPrice();
-
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -48,7 +41,7 @@ export default function NFTCard({ id, imageUrl, name }: NFTCardProps) {
 
           <div className="mt-4">
             <p><strong>Everai {name}</strong></p>
-            <p>{randomPrice} ETH</p>
+            <p>0,07 ETH</p>
           </div>
 
           {isHovered && (
