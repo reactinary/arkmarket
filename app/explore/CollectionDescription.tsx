@@ -25,7 +25,9 @@ export default function CollectionDescription() {
       <span>{displayedDescription}</span>
       <button
         className="ml-2 text-sm font-bold text-[#73B9EB]"
-        onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}>Show more</button>
+        onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}>
+        {isDescriptionExpanded ? 'See less' : 'See more'}
+      </button>
     </div>
   )
 }
