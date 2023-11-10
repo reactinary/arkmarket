@@ -1,16 +1,25 @@
 'use client'
-import { useQuery } from "@tanstack/react-query";
-import { FilterBtn, LiveData, SortByDropdown, SortByBtns, NFTGrid, SearchBar, Sidebar } from "./_components";
+import { FilterBtn, Sidebar, LiveData, SortByDropdown, SortByBtns, NFTGrid, SearchBar } from "./_components";
+import { useQuery } from "@tanstack/react-query"
+import { useState } from "react"
+import { fetchNFTs } from "@/lib/fetchNFTs"
 import { results } from "@/constants/liveData"
-import { fetchNFTs } from "@/lib/fetchNFTs";
+import { FilteredNFT } from "@/types";
 
 
 
 export default function ItemsPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const { data: NFTs, isLoading, isError, error } = useQuery({
     queryKey: ['NFTs'],
     queryFn: fetchNFTs
   });
+
+
+  const filteredNFTs = NFTs ? NFTs.filter((NFT: FilteredNFT) =>
+    NFT.metadata.name.toLowerCase().includes(searchQuery.toLowerCase())
+  ) : [];
 
 
   return (
@@ -19,7 +28,7 @@ export default function ItemsPage() {
       <div className="flex justify-between items-center gap-6 h-[62px]">
         <FilterBtn />
         <LiveData results={results} />
-        <SearchBar />
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <SortByDropdown />
         <SortByBtns />
       </div>
@@ -27,7 +36,7 @@ export default function ItemsPage() {
       {/* ----- 📜 RESULTS SECTION 📜 ------- */}
       <section className="flex gap-10 items-start">
         <Sidebar />
-        <NFTGrid />
+        <NFTGrid filteredNFTs={filteredNFTs} isLoading={isLoading} />
       </section>
     </div>
   )
