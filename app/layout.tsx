@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider"
 import TanstackProvider from "@/providers/TanstackProvider";
 import { TailwindIndicator } from "@/components/TailwindIndicator"
 import Navbar from "@/components/Navbar"
+import SiteFooter from "@/components/SiteFooter"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -44,7 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <main className="flex-1">
                 <TanstackProvider>{children}</TanstackProvider>
               </main>
-              {/* <SiteFooter /> */}
+              <SiteFooter />
             </div>
             <TailwindIndicator />
           </ThemeProvider>
