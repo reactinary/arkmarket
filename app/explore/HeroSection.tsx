@@ -12,7 +12,7 @@ export default function HeroSection() {
       <Image src="/banner.jpg" alt="background" width={1920} height={500}/>
 
 
-      <div className="container">
+      <div className="container flex flex-col md:flex-row justify-between md:items-start sm:items-center mt-6  gap-4">
         <CollectionDescription />
         <CollectionStats />
       </div>
