@@ -1,11 +1,5 @@
-import { MainNavItem, SidebarNavItem } from "@/types/nav"
 
-interface NavConfig {
-  mainNav: MainNavItem[]
-}
-
-
-export const navConfig: NavConfig = {
+export const navConfig = {
   mainNav: [
     {
       title: "Explore",
