@@ -13,8 +13,7 @@ export default function CollectionDescription() {
 
 
   return (
-    // <div className="max-w-[380px]  lg:max-w-[430px]   border border-gray-500">
-    <div className="max-w-[360px] md:max-w-[430px]   border border-gray-500">
+    <div className="max-w-[360px] md:max-w-[430px]">
 
       <div className="flex gap-4 mb-4">
         <Image src="/character.jpg" alt="character" width={100} height={100} className="rounded-md"/>
