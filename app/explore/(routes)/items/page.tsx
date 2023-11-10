@@ -1,5 +1,6 @@
 'use client'
 import { FilterBtn, LiveData, SortByDropdown, SortByBtns, NFTGrid, SearchBar, Sidebar } from "./_components";
+import { results } from "@/constants/liveData"
 
 
 
@@ -9,7 +10,7 @@ export default function ItemsPage() {
       {/* ------ 🔎 FILTERS BAR 🔍 ------- */}
       <div className="flex justify-between items-center gap-6 h-[62px]">
         <FilterBtn />
-        <LiveData />
+        <LiveData results={results} />
         <SearchBar />
         <SortByDropdown />
         <SortByBtns />
